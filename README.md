@@ -1,11 +1,13 @@
 # Todo App – Vanilla JavaScript + SCSS
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-759589?style=for-the-badge&logo=openai&logoColor=white)](https://ifa-pdn.github.io/Todo-App-Vanilla-JavaScript/)
+
+&nbsp;
+
 _日本語_
 
 **HTML、SCSS、Vanilla JavaScript** を使用して作成した、シンプルな **Todo リストアプリ** です。  
 フレームワークを使わず、**アプリのロジック、DOM 操作、シンプルな状態管理** に重点を置いています。
-
----
 
 ## 主な機能
 
@@ -19,8 +21,6 @@ _日本語_
 - 日付と時刻のリアルタイム表示
 - レスポンシブ対応
 
----
-
 ## アプリの仕組み
 
 ### 1. 状態管理
@@ -31,8 +31,6 @@ _日本語_
 - `currentFilter` → 現在選択されているフィルター
 
 状態は **localStorage** に保存され、ページを再読み込みしてもデータが保持されます。
-
----
 
 ### 2. Todo データ構造
 
@@ -58,8 +56,6 @@ Todo は `map()` と `innerHTML` を使用して DOM に描画されます。
 
 この仕組みにより、UI とデータの整合性が保たれます。
 
----
-
 ## 4. Todo のフィルタリング
 
 Todo は状態別にフィルタリングできます。
@@ -70,8 +66,6 @@ Todo は状態別にフィルタリングできます。
 
 選択したフィルターは `localStorage` に保存され、再読み込み後も維持されます。
 
----
-
 ## 5. ドラッグ＆ドロップ
 
 タスクの並び替えに **ドラッグ＆ドロップ** を使用できます。
@@ -80,16 +74,12 @@ Todo は状態別にフィルタリングできます。
 - 並び順は即座に `localStorage` に保存
 - ページを再読み込みしても順序が保持されます
 
----
-
 ## 6. SCSS によるスタイリング
 
 スタイリングは **SCSS** を使用し、保守性と可読性を重視しています。
 
 - SCSS は partial（`_normalize.scss`）で分割
 - ビルド不要で確認できるよう、コンパイル済み CSS も同梱
-
----
 
 ## 使用技術
 
@@ -99,8 +89,6 @@ Todo は状態別にフィルタリングできます。
 - LocalStorage API
 - SortableJS
 - Font Awesome
-
----
 
 ## フォルダ構成
 
@@ -119,8 +107,6 @@ Todo は状態別にフィルタリングできます。
     └── icons/
 ```
 
----
-
 ## プロジェクトの目的
 
 本プロジェクトは以下を目的として作成しました。
@@ -137,8 +123,6 @@ _English_
 A simple **Todo List application** built using **HTML, SCSS, and Vanilla JavaScript**.  
 This project focuses on **application logic, DOM manipulation, and simple state management** without using any framework.
 
----
-
 ## Features
 
 - Add new tasks
@@ -151,8 +135,6 @@ This project focuses on **application logic, DOM manipulation, and simple state 
 - Displays real-time date & time
 - Responsive layout
 
----
-
 ## How the App Works
 
 ### 1. State Management
@@ -163,8 +145,6 @@ The application uses two main states:
 - `currentFilter` → stores the active filter
 
 The state is saved to and loaded from **localStorage**, so data persists even after a page reload.
-
----
 
 ### 2. Todo Data Structure
 
@@ -190,8 +170,6 @@ Every data change (add / edit / delete / toggle) follows this flow:
 
 This approach ensures the UI always stays in sync with the data.
 
----
-
 ## 4. Todo Filtering
 
 Todos can be filtered by status:
@@ -202,8 +180,6 @@ Todos can be filtered by status:
 
 The selected filter is saved to `localStorage` and restored on page reload.
 
----
-
 ## 5. Drag & Drop
 
 The app supports **drag & drop** for reordering tasks.
@@ -212,16 +188,12 @@ The app supports **drag & drop** for reordering tasks.
 - The updated order is immediately saved to `localStorage`
 - The order persists after reloading the page
 
----
-
 ## 6. Styling with SCSS
 
 The app is styled using **SCSS** to keep the code clean and organized.
 
 - SCSS structure is split using partials (`_normalize.scss`)
 - Compiled CSS files are included for easy preview without a build process
-
----
 
 ## Technologies Used
 
@@ -231,8 +203,6 @@ The app is styled using **SCSS** to keep the code clean and organized.
 - LocalStorage API
 - SortableJS
 - Font Awesome
-
----
 
 ## Project Structure
 
@@ -251,8 +221,6 @@ The app is styled using **SCSS** to keep the code clean and organized.
     └── icons/
 ```
 
----
-
 ## Project Purpose
 
 This project was created for:
@@ -269,8 +237,6 @@ _Bahasa Indonesia_
 Aplikasi **Todo List sederhana** yang dibuat menggunakan **HTML, SCSS, dan Vanilla JavaScript**.  
 Aplikasi ini dirancang untuk fokus pada **logika aplikasi, manipulasi DOM, dan manajemen state sederhana** tanpa framework.
 
----
-
 ## Fitur Utama
 
 - Tambah task baru
@@ -282,8 +248,6 @@ Aplikasi ini dirancang untuk fokus pada **logika aplikasi, manipulasi DOM, dan m
 - Data tersimpan otomatis menggunakan `localStorage`
 - Menampilkan tanggal & jam real-time
 - Tampilan responsif
-
----
 
 ## Cara Kerja Aplikasi
 
@@ -345,8 +309,6 @@ Styling aplikasi ditulis menggunakan **SCSS** untuk menjaga struktur kode tetap 
 - Struktur SCSS dipisah menggunakan partial (`_normalize.scss`)
 - File CSS hasil compile tetap disertakan untuk kemudahan preview tanpa proses build tambahan
 
----
-
 ## Teknologi yang Digunakan
 
 - HTML5
@@ -355,8 +317,6 @@ Styling aplikasi ditulis menggunakan **SCSS** untuk menjaga struktur kode tetap 
 - LocalStorage API
 - SortableJS
 - Font Awesome
-
----
 
 ## Struktur Folder
 
@@ -374,8 +334,6 @@ Styling aplikasi ditulis menggunakan **SCSS** untuk menjaga struktur kode tetap 
 └── assets/
     └── icons/
 ```
-
----
 
 ### Tujuan Project
 
