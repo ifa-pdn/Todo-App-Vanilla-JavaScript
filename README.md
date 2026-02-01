@@ -1,6 +1,6 @@
 # Todo App – Vanilla JavaScript + SCSS
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-759589?style=for-the-badge&logo=openai&logoColor=white)](https://ifa-pdn.github.io/Todo-App-Vanilla-JavaScript/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-26a69a?style=for-the-badge&logo=openai&logoColor=white)](https://ifa-pdn.github.io/Todo-App-Vanilla-JavaScript/)
 
 &nbsp;
 
