@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Easy to use Minimalist ToDo Apps" />
+    <meta name="author" content="Iwan Fauzan" />
+    <title>Minimalist ToDo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="assets/icons/icon.png" />
+    <link rel="icon" type="image/png" href="assets/icons/icon.png" />
+  </head>
+  <body class="todo-canvas">
+    <div class="anime-characters"></div>
+    <div class="todo-app">
+      <header class="todo-app__header header">
+        <h1 class="header__title">ToDo</h1>
+
+        <p class="header__date date"></p>
+
+        <time class="header__time"></time>
+      </header>
+
+      <main class="todo-app__main main">
+        <div class="main__header">
+          <h2 class="main__title">My Task</h2>
+          <select name="filter" id="filter" class="main__filter filter">
+            <option value="all" class="filter__option">All</option>
+            <option value="active" class="filter__option">Active</option>
+            <option value="done" class="filter__option">Done</option>
+          </select>
+        </div>
+
+        <ul class="main__todolist todolist"></ul>
+      </main>
+
+      <button class="todo-app__add active">＋ Add Task</button>
+
+      <form class="add-task">
+        <input
+          type="text"
+          class="add-task__text"
+          placeholder="Add new task..."
+          required
+        />
+        <div class="add-task__buttons">
+          <button type="button" class="add-task__cancel">Cancel</button>
+          <button type="submit" class="add-task__save">Save Task</button>
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/472ab9d74f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

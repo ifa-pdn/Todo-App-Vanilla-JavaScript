@@ -1,0 +1,133 @@
+// Universal reset paling dasar (WAJIB)
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+// Kenapa penting?
+// Padding & border tidak bikin elemen melebar
+// Layout jadi mudah diprediksi
+// Hampir semua dev modern pakai ini
+
+// body (fondasi layout)
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  line-height: 1.5;
+}
+// Alasan:
+// Browser default punya margin aneh
+// line-height bikin teks lebih enak dibaca
+// font sistem = ringan & aman
+
+// img & media lain (yang tadi kita bahas)
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+// semua media:
+// responsive
+// tidak bikin overflow
+// tidak ada gap aneh
+
+// input, textarea (sering bikin kesel)
+input,
+select,
+textarea {
+  font: inherit; /* ikut font parent */
+  color: inherit;
+  letter-spacing: inherit;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+
+  outline: none;
+  appearance: none; /* hapus style default (important!) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: auto;
+  -webkit-appearance: auto;
+}
+
+select {
+  cursor: pointer;
+}
+
+/* Hilangkan arrow default di IE/Edge lama */
+select::-ms-expand {
+  display: none;
+}
+
+// button
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+// a (link)
+a {
+  color: inherit;
+  text-decoration: none;
+}
+// opsional
+// Kalau project kamu butuh link terlihat jelas, jangan hapus underline semuanya.
+
+// ul, ol (list)
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+// Dipakai kalau:
+// navbar
+// menu
+// list custom
+
+// Heading & paragraph (rapihin spacing)
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dd,
+figure,
+blockquote {
+  margin: 0;
+}
+// Biasanya nanti kamu atur spacing pakai class / utility.
+
+// Optional tapi berguna
+
+// Scroll lebih halus
+html {
+  scroll-behavior: smooth;
+}
+
+// Fokus keyboard (aksesibilitas)
+:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
