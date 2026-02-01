@@ -135,47 +135,6 @@ const removeTodo = (id) => {
   render();
 };
 
-// Draggable
-let draggedId = null;
-
-// Start Dragging
-ul.addEventListener("dragstart", (e) => {
-  const li = e.target.closest(".todolist__item");
-  if (!li) return;
-
-  draggedId = li.dataset.id;
-  console.log("draggedId:", draggedId);
-  li.classList.add("dragging");
-});
-
-ul.addEventListener("dragend", (e) => {
-  const li = e.target.closest(".todolist__item");
-  if (!li) return;
-  console.log("draggedId:", draggedId);
-  li.classList.remove("dragging");
-});
-
-ul.addEventListener("dragover", (e) => {
-  e.preventDefault();
-});
-
-ul.addEventListener("drop", (e) => {
-  const targetLi = e.target.closest(".todolist__item");
-  if (!targetLi || draggedId === targetLi.dataset.id) return;
-
-  const fromIndex = todos.findIndex((t) => t.id === draggedId);
-  const toIndex = todos.findIndex((t) => t.id === targetLi.dataset.id);
-
-  console.log("fromIndex:", fromIndex);
-  console.log("toIndex:", toIndex);
-
-  const moved = todos.splice(fromIndex, 1)[0];
-  todos.splice(toIndex, 0, moved);
-
-  saveTodos();
-  render();
-});
-
 // Reorder todo function
 const reorderTodos = () => {
   const active = todos.filter((todo) => !todo.done);
@@ -200,6 +159,12 @@ new window.Sortable(ul, {
   ghostClass: "drag-ghost",
   chosenClass: "drag-chosen",
   dragClass: "drag-dragging",
+
+  onEnd() {
+    const newOrder = [...ul.children].map((li) => li.dataset.id);
+    todos = newOrder.map((id) => todos.find((todo) => todo.id === id));
+    saveTodos();
+  },
 });
 
 // Create new task
